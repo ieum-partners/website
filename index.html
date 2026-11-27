@@ -80,6 +80,34 @@ section{scroll-margin-top:84px}
 .card{border-top:1px solid #C7AC78;padding-top:28px}
 .card .t{font-size:20px;line-height:1.55}
 .card p{margin:14px 0 0;font-size:15px;line-height:1.75}
+/* concerns carousel */
+.cc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+.cc-nav{display:flex;gap:10px}
+.cc-btn{width:52px;height:52px;border:1px solid #122235;background:transparent;color:#122235;font-size:20px;cursor:pointer;transition:all .2s}
+.cc-btn:hover{background:#122235;color:#fff}
+.cc-track{margin-top:56px;display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 48px)/3);gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none}
+.cc-track::-webkit-scrollbar{display:none}
+.cc{scroll-snap-align:start;background:#fff;padding:36px 32px 40px;border-top:2px solid #C7AC78;min-height:260px;display:flex;flex-direction:column}
+.cc-top{display:flex;align-items:baseline;gap:14px}
+.cc-n{font-size:26px;color:#C7AC78}
+.cc-cat{font-size:13px;letter-spacing:1px;color:#7A6236}
+.cc-t{margin-top:22px;font-size:21px;line-height:1.55}
+.cc p{margin:16px 0 0;font-size:15px;line-height:1.75}
+.btn.kakao{background:#FEE500;border-color:#FEE500;color:#191919}
+.btn.kakao:hover{background:#f2da00}
+/* funding */
+.fund{background:#122235;color:#fff}
+.fund .wrap{display:flex;gap:72px;align-items:flex-start}
+.fund-l{flex:0 0 400px}
+.fund .lead{color:#C9CDD4}
+.fund-steps{flex:1;margin:0;padding:0;list-style:none;border-top:1px solid rgba(199,172,120,.5)}
+.fund-steps li{display:flex;gap:28px;padding:26px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.fund-steps .n{font-size:26px;color:#C7AC78;width:40px;flex-shrink:0}
+.fund-steps .t{font-size:18px;font-weight:700}
+.fund-steps .d{margin-top:6px;font-size:14px;line-height:1.75;color:#C9CDD4}
+.fund .btns .btn.line{border-color:#C7AC78;color:#fff}
+.fund .btns .btn.line:hover{background:#C7AC78;color:#122235}
+.fund-note{margin:28px 0 0;font-size:12px;line-height:1.7;color:#9AA3B2}
 /* areas */
 .areas{margin-top:72px;border-top:1px solid #E6E3DC}
 .area{display:flex;align-items:stretch;gap:40px;padding:34px 0;border-bottom:1px solid #E6E3DC}
@@ -102,8 +130,8 @@ section{scroll-margin-top:84px}
 .about h2{letter-spacing:8px}
 .about .role{margin-top:12px;font-size:16px}
 .about p{margin:28px 0 0;max-width:540px;font-size:16px;line-height:1.9}
-.pinfo{margin:40px 0 0;max-width:560px;border-top:1px solid #C7AC78}
-.pinfo>div{display:flex;gap:32px;padding:18px 0;border-bottom:1px solid #E6E3DC;font-size:15px;line-height:1.75}
+.pinfo{margin:36px 0 0;max-width:560px;border-top:1px solid #E6E3DC;padding-top:12px}
+.pinfo>div{display:flex;gap:32px;padding:10px 0;font-size:15px;line-height:1.75}
 .pinfo dt{width:84px;flex-shrink:0;font-weight:700;color:#122235}
 .pinfo dd{margin:0;color:#4A5363}
 /* network */
@@ -139,7 +167,7 @@ section{scroll-margin-top:84px}
 .faq .q{font-size:18px;font-weight:700}
 .faq p{margin:10px 0 0;font-size:15px;line-height:1.75}
 /* contact */
-.contact .wrap{display:flex;gap:80px;align-items:flex-start;justify-content:space-between}
+.contact .wrap{display:flex;gap:80px;align-items:flex-end;justify-content:space-between}
 .cinfo{display:flex;gap:32px}
 .cinfo .rows{display:flex;flex-direction:column;gap:12px;font-size:16px}
 .cinfo .rows div{display:flex;gap:18px}
@@ -162,13 +190,17 @@ section{scroll-margin-top:84px}
  .hero p{font-size:16px}
  .sec{padding:90px 0}
  .cards{grid-template-columns:1fr;gap:36px}
+ .cc-track{grid-auto-columns:86%;gap:14px;margin-top:36px}
+ .cc-btn{width:44px;height:44px}
  .area{flex-direction:column;gap:10px}
  .area .gold-v{display:none}
  .steps{grid-template-columns:1fr;gap:28px}
  .ngrid{grid-template-columns:1fr}
  .ncard.feat{grid-column:auto}
  .ncard{min-height:0;padding:32px 26px}
- .about .wrap,.contact .wrap{flex-direction:column;gap:48px}
+ .about .wrap,.contact .wrap,.fund .wrap{flex-direction:column;gap:48px}
+ .contact .wrap{align-items:flex-start}
+ .fund-l{flex:auto}
  .portrait{width:100%;height:auto;max-width:420px}
  .pinfo>div{gap:16px}
  .pinfo dt{width:68px}
@@ -181,8 +213,8 @@ section{scroll-margin-top:84px}
 <label for="mnav" class="mnav-dim" aria-hidden="true"></label>
 <aside class="mnav" aria-label="전체 메뉴">
 <label for="mnav" class="mnav-x" aria-label="메뉴 닫기"><span></span><span></span></label>
-<nav class="mnav-main"><a href="#insights" onclick="document.getElementById('mnav').checked=false"><span class="en">INSIGHTS</span><span class="ko">소식</span></a><a href="#areas" onclick="document.getElementById('mnav').checked=false"><span class="en">PRACTICE</span><span class="ko">업무 영역</span></a><a href="#process" onclick="document.getElementById('mnav').checked=false"><span class="en">PROCESS</span><span class="ko">일하는 방식</span></a><a href="#about" onclick="document.getElementById('mnav').checked=false"><span class="en">PROFILE</span><span class="ko">대표 소개</span></a><a href="#contact" onclick="document.getElementById('mnav').checked=false"><span class="en">CONTACT</span><span class="ko">상담 신청</span></a></nav>
-<div class="mnav-sub"><a href="tel:01099830153">전화 상담</a><a href="mailto:kms@ieum-partners.co.kr">이메일 문의</a></div>
+<nav class="mnav-main"><a href="#insights" onclick="document.getElementById('mnav').checked=false"><span class="en">INSIGHTS</span><span class="ko">소식</span></a><a href="#funding" onclick="document.getElementById('mnav').checked=false"><span class="en">FUNDING</span><span class="ko">정책자금 신청</span></a><a href="#areas" onclick="document.getElementById('mnav').checked=false"><span class="en">PRACTICE</span><span class="ko">업무 영역</span></a><a href="#process" onclick="document.getElementById('mnav').checked=false"><span class="en">PROCESS</span><span class="ko">일하는 방식</span></a><a href="#about" onclick="document.getElementById('mnav').checked=false"><span class="en">PROFILE</span><span class="ko">대표 소개</span></a><a href="#contact" onclick="document.getElementById('mnav').checked=false"><span class="en">CONTACT</span><span class="ko">상담 신청</span></a></nav>
+<div class="mnav-sub"><a href="https://pf.kakao.com/_UgIeX/chat" target="_blank" rel="noopener">카카오톡 상담</a><a href="tel:01099830153">전화 상담</a><a href="mailto:kms@ieum-partners.co.kr">이메일 문의</a></div>
 <div class="mnav-ft"><a href="#contact" onclick="document.getElementById('mnav').checked=false">오시는 길</a><i></i><a href="#contact" onclick="document.getElementById('mnav').checked=false">연락처</a></div>
 </aside>
 <header class="hd"><div class="wrap">
@@ -196,7 +228,7 @@ section{scroll-margin-top:84px}
 <div class="eyebrow">CORPORATE MANAGEMENT CONSULTING</div>
 <h1 class="serif">기업과 가치를 잇다.</h1>
 <p class="muted">정책자금 · 가지급금 정리 · CEO 퇴직금 · 중대재해 대비 · 가업승계까지, 법인 대표님의 경영 고민을 진단부터 실행까지 함께합니다.</p>
-<div class="btns"><a href="#contact" class="btn solid">정책자금 가능 여부 확인</a><a href="#contact" class="btn line">법인 재무·정관 진단 신청</a></div>
+<div class="btns"><a href="#funding" class="btn solid">정책자금 신청하기</a><a href="#contact" class="btn line">법인 재무·정관 진단 신청</a></div>
 </div></div>
 <div class="hero-mark"><svg role="img" aria-label="이음파트너스 로고" width="240" height="240" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#122235"/><rect x="44" y="44" width="32" height="32" fill="#C7AC78"/></svg></div>
 </div></section>
@@ -208,13 +240,27 @@ section{scroll-margin-top:84px}
 </div></section>
 
 <section class="sec soft"><div class="wrap">
-<div class="eyebrow">CONCERNS</div>
-<h2 class="serif">이런 고민 있으세요?</h2>
-<div class="cards">
-<div class="card"><div class="t serif">가지급금과 잉여금이<br>계속 쌓입니다</div><p class="muted">주식가치와 상속세가 함께 커지고 있을 수 있습니다.</p></div>
-<div class="card"><div class="t serif">승계를 어떻게<br>준비할지 모르겠습니다</div><p class="muted">지분 이전과 상속세 재원은 시간이 있을 때 준비해야 합니다.</p></div>
-<div class="card"><div class="t serif">받을 수 있는 지원금을<br>놓치고 있습니다</div><p class="muted">정책자금·고용지원금은 요건만 맞으면 신청할 수 있습니다.</p></div>
-</div></div></section>
+<div class="cc-head"><div><div class="eyebrow">CONCERNS</div>
+<h2 class="serif">이런 고민 있으세요?</h2></div>
+<div class="cc-nav"><button type="button" class="cc-btn" aria-label="이전" onclick="document.getElementById('cct').scrollBy({left:-document.getElementById('cct').clientWidth*0.9,behavior:'smooth'})">&#8592;</button><button type="button" class="cc-btn" aria-label="다음" onclick="document.getElementById('cct').scrollBy({left:document.getElementById('cct').clientWidth*0.9,behavior:'smooth'})">&#8594;</button></div></div>
+<div class="cc-track" id="cct"><div class="cc"><div class="cc-top"><span class="cc-n latin">01</span><span class="cc-cat">정부지원 · 정책자금</span></div><div class="cc-t serif">운전·시설자금,<br>은행 대출만 알아보셨나요?</div><p class="muted">중진공·기보·신보 정책자금은 기술성과 사업성을 보고 지원합니다. 받을 수 있는지부터 확인합니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">02</span><span class="cc-cat">정부지원 · 고용지원금</span></div><div class="cc-t serif">직원을 뽑고도<br>지원금을 놓치고 있습니다</div><p class="muted">채용·고용유지 지원금은 신청 시기와 요건을 놓치면 받을 수 없습니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">03</span><span class="cc-cat">정부지원 · 연구소·벤처인증</span></div><div class="cc-t serif">연구소·벤처인증,<br>정말 필요할까요?</div><p class="muted">인증은 세액공제와 정책자금 우대로 이어질 수 있어 요건부터 점검합니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">04</span><span class="cc-cat">정부지원 · 특허</span></div><div class="cc-t serif">특허를 회사 자산으로<br>쓰고 계신가요?</div><p class="muted">특허는 기술가치 평가, 정책자금, 재무구조 개선에 활용할 수 있습니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">05</span><span class="cc-cat">법인재무 · 비상장주식 평가</span></div><div class="cc-t serif">우리 회사 주식,<br>지금 얼마인지 아시나요?</div><p class="muted">주식가치는 상속·증여·지분 이동의 세금을 결정합니다. 정기적으로 확인해야 합니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">06</span><span class="cc-cat">법인재무 · 가지급금</span></div><div class="cc-t serif">가지급금이<br>계속 쌓여 갑니다</div><p class="muted">인정이자와 세무 위험이 함께 커집니다. 생긴 원인부터 정리 방법까지 찾습니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">07</span><span class="cc-cat">법인재무 · 잉여금</span></div><div class="cc-t serif">잉여금이 쌓여<br>주식가치가 올랐습니다</div><p class="muted">쌓인 잉여금은 주식가치와 상속세를 함께 키웁니다. 합법적인 출구를 설계합니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">08</span><span class="cc-cat">법인재무 · 이익소각</span></div><div class="cc-t serif">자기주식 매입·이익소각,<br>우리 회사도 될까요?</div><p class="muted">상법 절차와 세무 쟁점을 확인한 뒤 진행해야 안전합니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">09</span><span class="cc-cat">CEO 컨설팅 · 정관 정비</span></div><div class="cc-t serif">정관을 설립 때<br>그대로 쓰고 있습니다</div><p class="muted">임원 보수·퇴직금·배당 규정이 정관에 없으면 비용 인정에 문제가 생길 수 있습니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">10</span><span class="cc-cat">CEO 컨설팅 · 급여·배당 설계</span></div><div class="cc-t serif">급여와 배당,<br>어떻게 받는 게 나을까요?</div><p class="muted">대표님의 소득 구조에 따라 개인과 법인의 세 부담이 달라집니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">11</span><span class="cc-cat">CEO 컨설팅 · CEO 퇴직 플랜</span></div><div class="cc-t serif">대표님 퇴직금,<br>준비되어 있나요?</div><p class="muted">임원 퇴직금 규정과 재원을 미리 마련해야 은퇴 자금으로 쓸 수 있습니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">12</span><span class="cc-cat">기업보장분석 · 근로자 재해보장</span></div><div class="cc-t serif">직원이 다치면<br>회사는 무엇을 해야 할까요?</div><p class="muted">사고 뒤 보상과 대응 절차를 미리 점검해 둡니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">13</span><span class="cc-cat">기업보장분석 · 산재 초과 손해배상</span></div><div class="cc-t serif">산재보험으로<br>다 해결되지 않습니다</div><p class="muted">산재보험을 넘는 민사상 손해배상은 회사가 부담할 수 있습니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">14</span><span class="cc-cat">기업보장분석 · 중대재해 대응</span></div><div class="cc-t serif">중대재해처벌법,<br>대비가 되어 있나요?</div><p class="muted">안전보건 관리체계와 사고 시 경영책임자의 대응을 점검합니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">15</span><span class="cc-cat">가업승계 · 가업상속공제</span></div><div class="cc-t serif">가업상속공제 요건,<br>갖추고 계신가요?</div><p class="muted">사전요건과 사후관리를 지키지 못하면 공제받은 세금이 추징될 수 있습니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">16</span><span class="cc-cat">가업승계 · 증여특례</span></div><div class="cc-t serif">자녀에게 지분을<br>언제, 어떻게 넘길까요?</div><p class="muted">가업승계 증여특례 같은 제도를 활용하면 승계 시점의 세 부담을 줄일 수 있습니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">17</span><span class="cc-cat">가업승계 · 상속세 재원</span></div><div class="cc-t serif">상속세를 낼 현금,<br>준비되어 있나요?</div><p class="muted">비상장주식 위주의 자산은 상속세 납부 재원이 부족해지기 쉽습니다.</p></div><div class="cc"><div class="cc-top"><span class="cc-n latin">18</span><span class="cc-cat">가업승계 · 차명주식 환원</span></div><div class="cc-t serif">예전에 명의를 빌린<br>주식이 있습니다</div><p class="muted">차명주식은 환원 방법에 따라 세금과 분쟁 위험이 달라집니다.</p></div></div>
+</div></section>
+
+<section id="funding" class="sec fund"><div class="wrap">
+<div class="fund-l">
+<div class="eyebrow" style="color:#C7AC78">POLICY FUND</div>
+<h2 class="serif">정책자금 신청하기</h2>
+<p class="lead">중진공·기보·신보·지자체 정책자금 가운데 우리 회사에 맞는 자금을 찾고, 신청 준비를 함께합니다.</p>
+<div class="btns"><a href="https://pf.kakao.com/_UgIeX/chat" target="_blank" rel="noopener" class="btn kakao"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:8px"><path fill="currentColor" d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7l-1 3.6c-.1.4.3.6.6.4l4.3-2.8c.5.1.9.1 1.4.1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>카카오톡으로 신청</a><a href="mailto:kms@ieum-partners.co.kr?subject=%5B%EC%A0%95%EC%B1%85%EC%9E%90%EA%B8%88%20%EC%83%81%EB%8B%B4%5D%20" class="btn line">이메일로 신청</a></div>
+<p class="fund-note">정책자금의 지원 여부와 금액은 각 기관의 심사로 결정되며, 이음파트너스가 승인이나 한도를 약속하지 않습니다.</p>
+</div>
+<ol class="fund-steps">
+<li><span class="n latin">01</span><div><div class="t">기업 현황 확인</div><div class="d">사업자등록증과 최근 재무제표로 업력, 매출, 신용, 인증 현황을 봅니다.</div></div></li>
+<li><span class="n latin">02</span><div><div class="t">맞는 자금 찾기</div><div class="d">운전·시설자금, 기술·창업자금, 지자체 이차보전 등 신청할 수 있는 자금을 정리합니다.</div></div></li>
+<li><span class="n latin">03</span><div><div class="t">신청 준비</div><div class="d">사업계획서와 제출 서류를 함께 준비하고, 기관 일정에 맞춰 신청합니다.</div></div></li>
+<li><span class="n latin">04</span><div><div class="t">사후 관리</div><div class="d">자금 사용 후 보고, 다음 해 추가 신청, 연계 지원금까지 챙깁니다.</div></div></li>
+</ol>
+</div></section>
 
 <section id="areas" class="sec"><div class="wrap">
 <div class="eyebrow">PRACTICE AREAS</div>
@@ -257,19 +303,26 @@ section{scroll-margin-top:84px}
 <div class="faq">
 <div><div class="q">어떤 자료가 필요한가요?</div><p class="muted">사업자등록증이면 시작할 수 있고, 재무제표와 정관이 있으면 더 정확합니다.</p></div>
 <div><div class="q">세무 신고도 해 주나요?</div><p class="muted">신고와 세무 대리는 협력 세무사가 맡습니다.</p></div>
+<div><div class="q">기존에 거래하는 세무사가 있어도 되나요?</div><p class="muted">네. 기존 세무사와 함께 협업해 진행할 수 있습니다.</p></div>
+<div><div class="q">상담 내용과 자료는 안전한가요?</div><p class="muted">상담에서 받은 자료와 내용은 상담 목적 외에는 쓰지 않습니다.</p></div>
+<div><div class="q">정책자금은 언제 준비하는 게 좋나요?</div><p class="muted">정책자금은 연초에 공고가 나고 예산이 소진되면 마감되는 경우가 많아, 연말부터 미리 준비하는 것이 좋습니다.</p></div>
+<div><div class="q">가지급금은 꼭 정리해야 하나요?</div><p class="muted">가지급금에는 인정이자가 붙고 대표님 소득으로 처리되는 등 세무 문제가 생길 수 있어, 생긴 원인에 맞게 정리하는 것이 좋습니다.</p></div>
+<div><div class="q">가업승계는 언제부터 준비해야 하나요?</div><p class="muted">가업상속공제와 증여특례에는 사전요건과 사후관리 요건이 있어, 승계 시점보다 몇 년 앞서 준비해야 합니다.</p></div>
+<div><div class="q">중대재해처벌법은 우리 회사에도 적용되나요?</div><p class="muted">상시근로자 5인 이상 사업장이라면 적용 대상입니다. 안전보건 관리체계를 갖췄는지 점검이 필요합니다.</p></div>
 <div><div class="q">상담은 어떻게 진행되나요?</div><p class="muted">전화나 이메일로 연락 주시면, 회사로 찾아뵙거나 편한 장소에서 뵙습니다.</p></div>
 </div></div></section>
 
-<section id="contact" class="sec soft contact"><div class="wrap">
-<div style="max-width:460px">
+<section id="contact" class="sec contact"><div class="wrap">
+<div style="max-width:560px">
 <div class="eyebrow">CONTACT</div>
 <h2 class="serif">상담 신청</h2>
 <p class="lead muted">정책자금 가능 여부부터 법인 재무·정관 진단까지, 편하게 연락 주세요.</p>
-<div class="btns"><a href="tel:01099830153" class="btn solid">전화 상담</a><a href="mailto:kms@ieum-partners.co.kr?subject=%5B%EC%83%81%EB%8B%B4%20%EC%8B%A0%EC%B2%AD%5D%20" class="btn line">이메일 보내기</a></div>
+<div class="btns"><a href="https://pf.kakao.com/_UgIeX/chat" target="_blank" rel="noopener" class="btn kakao"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:8px"><path fill="currentColor" d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7l-1 3.6c-.1.4.3.6.6.4l4.3-2.8c.5.1.9.1 1.4.1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>카카오톡 상담</a><a href="tel:01099830153" class="btn solid">전화 상담</a><a href="mailto:kms@ieum-partners.co.kr?subject=%5B%EC%83%81%EB%8B%B4%20%EC%8B%A0%EC%B2%AD%5D%20" class="btn line">이메일 보내기</a></div>
 </div>
 <div class="cinfo"><div class="gold-v"></div><div class="rows muted">
 <div><span style="color:#122235">M.</span><span>010-9983-0153</span></div>
 <div><span style="color:#122235">E.</span><span>kms@ieum-partners.co.kr</span></div>
+<div><span style="color:#122235">K.</span><span>카카오톡 채널 '이음파트너스'</span></div>
 <div><span style="color:#122235">A.</span><span>서울특별시 송파구 송파대로 567</span></div>
 </div></div>
 </div></section>
