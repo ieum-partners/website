@@ -34,6 +34,29 @@ a{color:inherit;text-decoration:none}
 .nav a:hover{color:#7A6236}
 .nav .cta{padding:10px 20px;border:1px solid #122235;font-weight:500}
 .nav .cta:hover{background:#122235;color:#fff}
+/* side menu */
+.mnav-t{position:fixed;opacity:0;pointer-events:none}
+.burger{width:28px;height:20px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer}
+.burger span{display:block;height:1.5px;background:#122235}
+.burger span:nth-child(2){width:70%}
+.hd .wrap{display:grid;grid-template-columns:1fr auto 1fr}
+.hd .brand{justify-self:center}
+.hd .nav{justify-self:end}
+.mnav{position:fixed;top:0;left:0;bottom:0;width:min(420px,88vw);background:#fff;z-index:30;transform:translateX(-100%);transition:transform .35s ease;display:flex;flex-direction:column;align-items:center;padding:110px 40px 48px;border-top:3px solid #C7AC78}
+.mnav-dim{position:fixed;inset:0;background:rgba(18,34,53,.55);z-index:25;opacity:0;pointer-events:none;transition:opacity .3s}
+.mnav-t:checked~.mnav{transform:none}
+.mnav-t:checked~.mnav-dim{opacity:1;pointer-events:auto}
+.mnav-x{position:absolute;top:34px;right:34px;width:26px;height:26px;cursor:pointer}
+.mnav-x span{position:absolute;top:12px;left:0;width:26px;height:1.5px;background:#122235;transform:rotate(45deg)}
+.mnav-x span+span{transform:rotate(-45deg)}
+.mnav-main{display:flex;flex-direction:column;align-items:center;gap:30px;margin-top:40px}
+.mnav-main a{display:flex;flex-direction:column;align-items:center;gap:4px}
+.mnav-main .en{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:38px;letter-spacing:4px;color:#122235;line-height:1}
+.mnav-main .ko{font-size:13px;letter-spacing:2px;color:#5A6270}
+.mnav-main a:hover .en{color:#7A6236}
+.mnav-sub{margin-top:64px;display:flex;flex-direction:column;align-items:center;gap:14px;font-size:16px;color:#7A6236}
+.mnav-ft{margin-top:auto;display:flex;align-items:center;gap:18px;font-size:14px;color:#4A5363}
+.mnav-ft i{width:1px;height:12px;background:#C9CDD4}
 /* hero */
 .hero{padding:150px 0 160px}
 .hero .wrap{display:flex;align-items:center;justify-content:space-between;gap:48px}
@@ -74,22 +97,43 @@ section{scroll-margin-top:84px}
 .steps .d{margin-top:10px;font-size:14px;line-height:1.75;color:#C9CDD4}
 /* about */
 .about .wrap{display:flex;gap:80px;align-items:center}
-.portrait{width:340px;height:420px;flex-shrink:0;background:#122235;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;position:relative}
-.portrait:after{content:'';position:absolute;inset:14px;border:1px solid rgba(199,172,120,.45)}
-.portrait .p1{font-size:28px;letter-spacing:10px;color:#fff;padding-left:10px}
-.portrait .p2{font-size:16px;letter-spacing:4px;color:#C7AC78}
+.portrait{width:380px;height:440px;flex-shrink:0;background:#EFEEEA;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;position:relative}
+.portrait:before{content:'';position:absolute;left:0;top:0;width:3px;height:64px;background:#C7AC78}
+.portrait img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
 .about h2{letter-spacing:8px}
 .about .role{margin-top:12px;font-size:16px}
-.about p{margin:32px 0 0;max-width:540px;font-size:16px;line-height:1.9}
-.about .facts{margin-top:36px;display:flex;gap:0}
-.about .facts div{padding:0 28px;border-left:1px solid #C7AC78;font-size:14px;line-height:1.7}
-.about .facts div:first-child{padding-left:0;border-left:0}
-.about .facts b{display:block;font-family:'Nanum Myeongjo',serif;font-size:17px;color:#122235;margin-bottom:2px}
+.about p{margin:28px 0 0;max-width:540px;font-size:16px;line-height:1.9}
+.pinfo{margin:40px 0 0;max-width:560px;border-top:1px solid #C7AC78}
+.pinfo>div{display:flex;gap:32px;padding:18px 0;border-bottom:1px solid #E6E3DC;font-size:15px;line-height:1.75}
+.pinfo dt{width:84px;flex-shrink:0;font-weight:700;color:#122235}
+.pinfo dd{margin:0;color:#4A5363}
 /* network */
 .net .wrap{display:flex;align-items:center;gap:48px;flex-wrap:wrap}
 .net .h{display:flex;align-items:center;gap:12px;font-size:24px;color:#7A6236}
 .net .list{font-size:18px;letter-spacing:1px}
 .net .note{flex-basis:100%;margin:0;font-size:14px;color:#5A6270}
+/* insights */
+.ins-h{text-align:center}
+.ins-h h2{margin:10px 0 0;font-size:clamp(44px,6vw,72px);letter-spacing:6px;line-height:1.1}
+.ins-h p{margin:14px 0 0;font-size:15px}
+.ngrid{margin-top:64px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ncard{background:#F5F5F3;padding:40px 36px;display:flex;flex-direction:column;min-height:280px;transition:background .2s}
+.ncard:hover{background:#EFEEEA}
+.ncard.feat{grid-column:span 2;background:#122235;color:#fff;position:relative;overflow:hidden}
+.ncard.feat:after{content:'';position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;border:1px solid rgba(199,172,120,.35)}
+.ncard.feat:hover{background:#0b1624}
+.ncat{align-self:flex-start;font-size:13px;font-weight:500;color:#7A6236;border-bottom:1px solid #C7AC78;padding-bottom:2px}
+.feat .ncat{color:#C7AC78}
+.nt{margin-top:18px;font-size:22px;line-height:1.45}
+.feat .nt{font-size:26px}
+.nd{margin-top:14px;font-size:14px;line-height:1.75;color:#4A5363;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.feat .nd{color:#C9CDD4}
+.nmeta{margin-top:auto;padding-top:24px;display:flex;flex-direction:column;gap:4px}
+.ndt{font-size:15px;color:#5A6270}
+.nsrc2{font-size:12px;color:#5A6270}
+.feat .nsrc2{color:#C9CDD4}
+.feat .ndt{color:#C9CDD4}
+.nsrc{margin:24px 0 0;font-size:13px;color:#5A6270;text-align:center}
 /* faq */
 .faq{margin-top:56px;max-width:860px;border-top:1px solid #E6E3DC}
 .faq>div{padding:28px 0;border-bottom:1px solid #E6E3DC}
@@ -107,7 +151,10 @@ section{scroll-margin-top:84px}
 .ft .b{display:flex;align-items:center;gap:10px;color:#fff;font-size:15px}
 @media (max-width:900px){
  .wrap{padding:0 22px}
- .nav a:not(.cta){display:none}
+ .mnav-main .en{font-size:32px}
+ .mnav{padding-top:96px}
+ .nav .cta{padding:8px 14px;font-size:13px}
+ .hd .wm{display:none}
  .hd .wrap{height:68px}
  section{scroll-margin-top:68px}
  .hero{padding:90px 0 100px}
@@ -119,18 +166,30 @@ section{scroll-margin-top:84px}
  .area{flex-direction:column;gap:10px}
  .area .gold-v{display:none}
  .steps{grid-template-columns:1fr;gap:28px}
+ .ngrid{grid-template-columns:1fr}
+ .ncard.feat{grid-column:auto}
+ .ncard{min-height:0;padding:32px 26px}
  .about .wrap,.contact .wrap{flex-direction:column;gap:48px}
- .portrait{width:100%;height:300px}
- .about .facts{flex-direction:column;gap:14px}
- .about .facts div{padding:0;border-left:0}
+ .portrait{width:100%;height:auto;max-width:420px}
+ .pinfo>div{gap:16px}
+ .pinfo dt{width:68px}
 }
 </style>
 </head>
 <body>
 <div class="page">
+<input type="checkbox" id="mnav" class="mnav-t" aria-hidden="true">
+<label for="mnav" class="mnav-dim" aria-hidden="true"></label>
+<aside class="mnav" aria-label="전체 메뉴">
+<label for="mnav" class="mnav-x" aria-label="메뉴 닫기"><span></span><span></span></label>
+<nav class="mnav-main"><a href="#areas" onclick="document.getElementById('mnav').checked=false"><span class="en">PRACTICE</span><span class="ko">업무 영역</span></a><a href="#process" onclick="document.getElementById('mnav').checked=false"><span class="en">PROCESS</span><span class="ko">일하는 방식</span></a><a href="#about" onclick="document.getElementById('mnav').checked=false"><span class="en">PROFILE</span><span class="ko">대표 소개</span></a><a href="#insights" onclick="document.getElementById('mnav').checked=false"><span class="en">INSIGHTS</span><span class="ko">소식</span></a><a href="#contact" onclick="document.getElementById('mnav').checked=false"><span class="en">CONTACT</span><span class="ko">상담 신청</span></a></nav>
+<div class="mnav-sub"><a href="tel:01099830153">전화 상담</a><a href="mailto:kms@ieum-partners.co.kr">이메일 문의</a></div>
+<div class="mnav-ft"><a href="#contact" onclick="document.getElementById('mnav').checked=false">오시는 길</a><i></i><a href="#contact" onclick="document.getElementById('mnav').checked=false">연락처</a></div>
+</aside>
 <header class="hd"><div class="wrap">
+<label for="mnav" class="burger" aria-label="메뉴 열기"><span></span><span></span><span></span></label>
 <a href="#top" class="brand"><svg role="img" aria-label="이음파트너스 로고" width="36" height="36" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#122235"/><rect x="44" y="44" width="32" height="32" fill="#C7AC78"/></svg><div class="wm"><div class="ko"><span>이</span><span>음</span><span>파</span><span>트</span><span>너</span><span>스</span></div><div class="en"><span>I</span><span>E</span><span>U</span><span>M</span><span style="width:3px"></span><span>P</span><span>A</span><span>R</span><span>T</span><span>N</span><span>E</span><span>R</span><span>S</span></div></div></a>
-<nav class="nav" aria-label="주요 메뉴"><a href="#areas">업무 영역</a><a href="#process">일하는 방식</a><a href="#about">대표 소개</a><a href="#contact" class="cta">상담 신청</a></nav>
+<nav class="nav" aria-label="주요 메뉴"><a href="#contact" class="cta">상담 신청</a></nav>
 </div></header>
 
 <section id="top" class="hero"><div class="wrap">
@@ -169,13 +228,16 @@ section{scroll-margin-top:84px}
 </ol></div></section>
 
 <section id="about" class="sec about"><div class="wrap">
-<div class="portrait" role="img" aria-label="이음파트너스 대표 강민성"><svg role="img" aria-label="이음파트너스 로고" width="64" height="64" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#F5F5F3"/><rect x="44" y="44" width="32" height="32" fill="#C7AC78"/></svg><div class="p1 serif">강민성</div><div class="p2 latin">Ph.D.</div></div>
-<div>
+<div class="portrait"><img src="photo.jpg" alt="이음파트너스 대표 강민성" width="382" height="440"></div>
+<div class="prof">
 <div class="eyebrow">CEO</div>
 <h2 class="serif" style="margin-top:14px">강민성</h2>
 <div class="role muted">대표 · 경영학 박사(Ph.D.)</div>
 <p class="muted">법인의 재무·지배구조·리스크를 진단하고, 대표님의 개인 자산과 법인 자산을 함께 설계합니다.</p>
-<div class="facts muted"><div><b>경영학 박사</b>Ph.D.</div><div><b>5개 영역</b>정부지원 · 법인재무 · CEO · 보장 · 승계</div><div><b>협업 네트워크</b>세무 · 회계 · 노무 · 법률 · 특허</div></div>
+<dl class="pinfo">
+<div><dt>업무 분야</dt><dd>정부지원 · 법인재무 · CEO 컨설팅 · 기업보장분석 · 가업승계</dd></div>
+<div><dt>연락처</dt><dd>M. 010-9983-0153<br>E. kms@ieum-partners.co.kr</dd></div>
+</dl>
 </div></div></section>
 
 <section class="sec soft net" style="padding:90px 0"><div class="wrap">
@@ -184,7 +246,13 @@ section{scroll-margin-top:84px}
 <p class="note">세액 계산과 신고, 등기, 법률 판단은 협력 전문가가 맡습니다.</p>
 </div></section>
 
-<section class="sec"><div class="wrap">
+<section id="insights" class="sec ins"><div class="wrap">
+<div class="ins-h"><div class="eyebrow">POLICY · TAX · SAFETY</div><h2 class="latin">INSIGHTS</h2><p class="muted">바뀌는 세법과 노동법 가운데 대표님이 꼭 챙겨야 할 내용을 원문과 대조해 정리합니다.</p></div>
+<!--NEWS-START--><div class="ngrid"><a class="ncard feat" href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=20147" target="_blank" rel="noopener"><span class="ncat">중대재해</span><span class="nt serif">산재 사망 반복되면 영업이익 5% 과징금, 우리 회사는 괜찮을까</span><span class="nd">개정 산업안전보건법이 2026년 10월 공포됐습니다. 안전·보건조치 위반으로 1년에 3명 이상이 사망하면 영업이익의 5% 범위에서 과징금이 부과되고, 하청 근로자도 원청에 작업중지를 요구할 수 있게 됩니다. 2027년 1월부터 조항별로 단계적으로 시행됩니다.</span><span class="nmeta"><span class="ndt latin">2026.10.27</span><span class="nsrc2">출처 · 고용노동부 보도자료 · 법률신문</span></span></a><a class="ncard" href="https://www.lawtimes.co.kr/news/articleView.html?idxno=226692" target="_blank" rel="noopener"><span class="ncat">가업승계</span><span class="nt serif">가업상속공제가 다시 짜입니다</span><span class="nd">정부가 가업의 정의를 새로 두고, 가업상속공제와 승계 증여특례의 대상·요건·사후관리를 다시 설계하는 세제개편안을 냈습니다. 국회 확정 내용에 따라 승계 계획 점검이 필요합니다.</span><span class="nmeta"><span class="ndt latin">2026.09.21</span><span class="nsrc2">출처 · 법률신문 (법무법인 태평양)</span></span></a><a class="ncard" href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=18908" target="_blank" rel="noopener"><span class="ncat">노동법</span><span class="nt serif">위험성평가, 2027년부터 안 하면 과태료</span><span class="nd">근로자대표 참여 등 새 위험성평가 절차는 이미 시행 중이고, 위반 과태료는 50인 이상 사업장 2027년 1월, 50인 미만은 2028년 1월부터 적용됩니다.</span><span class="nmeta"><span class="ndt latin">2026.01.29</span><span class="nsrc2">출처 · 고용노동부 보도자료 · 법률신문</span></span></a><a class="ncard" href="https://www.lawtimes.co.kr/news/articleView.html?idxno=226934" target="_blank" rel="noopener"><span class="ncat">노동법</span><span class="nt serif">연차 반차 사용·불이익 금지, 취업규칙 손볼 때</span><span class="nd">2027년 6월부터 연차를 반일 단위로 나눠 쓸 근거가 명확해지고, 연차 사용을 이유로 불리하게 대우하면 벌금이 부과됩니다.</span><span class="nmeta"><span class="ndt latin">2026.09.28</span><span class="nsrc2">출처 · 법률신문 (김·장 법률사무소)</span></span></a><a class="ncard" href="https://www.nts.go.kr/seoulnts/na/ntt/selectNttList.do?mi=7945&bbsId=1028" target="_blank" rel="noopener"><span class="ncat">국세청</span><span class="nt serif">고용·투자 늘린 중소기업, 세무조사 부담 던다</span><span class="nd">국세청이 고용과 투자를 늘린 중소기업의 세무조사 부담을 줄이는 방안을 내놨습니다.</span><span class="nmeta"><span class="ndt latin">2026.10.28</span><span class="nsrc2">출처 · 국세청 보도자료</span></span></a></div><!--NEWS-END-->
+<p class="nsrc">모든 내용은 정부 보도자료와 법령 원문으로 사실을 확인한 뒤 요약했습니다. 각 카드에 출처를 표기했으며, 누르면 원문으로 이동합니다.</p>
+</div></section>
+
+<section class="sec soft"><div class="wrap">
 <div class="eyebrow">FAQ</div>
 <h2 class="serif">자주 묻는 질문</h2>
 <div class="faq">
