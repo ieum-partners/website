@@ -166,6 +166,10 @@ section{scroll-margin-top:84px}
 .faq>div{padding:28px 0;border-bottom:1px solid #E6E3DC}
 .faq .q{font-size:18px;font-weight:700}
 .faq p{margin:10px 0 0;font-size:15px;line-height:1.75}
+.anon{margin-top:48px;max-width:860px;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:32px 36px;background:#F5F5F3;border-left:2px solid #C7AC78}
+.anon-t{font-size:20px}
+.anon p{margin:8px 0 0;font-size:14px;line-height:1.7}
+.anon .btn{flex-shrink:0}
 /* contact */
 .contact .wrap{display:flex;gap:80px;align-items:flex-end;justify-content:space-between}
 .cinfo{display:flex;gap:32px}
@@ -196,6 +200,7 @@ section{scroll-margin-top:84px}
  .area .gold-v{display:none}
  .steps{grid-template-columns:1fr;gap:28px}
  .ngrid{grid-template-columns:1fr}
+ .anon{flex-direction:column;align-items:flex-start;padding:26px 22px}
  .ncard.feat{grid-column:auto}
  .ncard{min-height:0;padding:32px 26px}
  .about .wrap,.contact .wrap,.fund .wrap{flex-direction:column;gap:48px}
@@ -214,7 +219,7 @@ section{scroll-margin-top:84px}
 <aside class="mnav" aria-label="전체 메뉴">
 <label for="mnav" class="mnav-x" aria-label="메뉴 닫기"><span></span><span></span></label>
 <nav class="mnav-main"><a href="#insights" onclick="document.getElementById('mnav').checked=false"><span class="en">INSIGHTS</span><span class="ko">소식</span></a><a href="#funding" onclick="document.getElementById('mnav').checked=false"><span class="en">FUNDING</span><span class="ko">정책자금 신청</span></a><a href="#areas" onclick="document.getElementById('mnav').checked=false"><span class="en">PRACTICE</span><span class="ko">업무 영역</span></a><a href="#process" onclick="document.getElementById('mnav').checked=false"><span class="en">PROCESS</span><span class="ko">일하는 방식</span></a><a href="#about" onclick="document.getElementById('mnav').checked=false"><span class="en">PROFILE</span><span class="ko">대표 소개</span></a><a href="#contact" onclick="document.getElementById('mnav').checked=false"><span class="en">CONTACT</span><span class="ko">상담 신청</span></a></nav>
-<div class="mnav-sub"><a href="https://pf.kakao.com/_UgIeX/chat" target="_blank" rel="noopener">카카오톡 상담</a><a href="tel:01099830153">전화 상담</a><a href="mailto:kms@ieum-partners.co.kr">이메일 문의</a></div>
+<div class="mnav-sub"><a href="https://pf.kakao.com/_UgIeX/chat" target="_blank" rel="noopener">카카오톡 상담</a><a href="tel:01099830153">전화 상담</a><a href="mailto:kms@ieum-partners.co.kr">이메일 문의</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSf8pws-FB7LwfgDY9mtJlSMv27iB7aOA8XbQJEaigZF8QkfPA/viewform" target="_blank" rel="noopener">익명으로 질문하기</a></div>
 <div class="mnav-ft"><a href="#contact" onclick="document.getElementById('mnav').checked=false">오시는 길</a><i></i><a href="#contact" onclick="document.getElementById('mnav').checked=false">연락처</a></div>
 </aside>
 <header class="hd"><div class="wrap">
@@ -309,8 +314,10 @@ section{scroll-margin-top:84px}
 <div><div class="q">가지급금은 꼭 정리해야 하나요?</div><p class="muted">가지급금에는 인정이자가 붙고 대표님 소득으로 처리되는 등 세무 문제가 생길 수 있어, 생긴 원인에 맞게 정리하는 것이 좋습니다.</p></div>
 <div><div class="q">가업승계는 언제부터 준비해야 하나요?</div><p class="muted">가업상속공제와 증여특례에는 사전요건과 사후관리 요건이 있어, 승계 시점보다 몇 년 앞서 준비해야 합니다.</p></div>
 <div><div class="q">중대재해처벌법은 우리 회사에도 적용되나요?</div><p class="muted">상시근로자 5인 이상 사업장이라면 적용 대상입니다. 안전보건 관리체계를 갖췄는지 점검이 필요합니다.</p></div>
-<div><div class="q">상담은 어떻게 진행되나요?</div><p class="muted">전화나 이메일로 연락 주시면, 회사로 찾아뵙거나 편한 장소에서 뵙습니다.</p></div>
-</div></div></section>
+<div><div class="q">상담은 어떻게 진행되나요?</div><p class="muted">전화, 이메일, 카카오톡으로 연락 주시면 일정을 잡아 이음파트너스 사무실로 모시거나, 대표님 회사로 직접 찾아뵙습니다.</p></div>
+</div>
+<div class="anon"><div><div class="anon-t serif">직접 묻기 어려우신가요?</div><p class="muted">이름 없이 업종과 궁금한 점만 남겨 주세요. 좋은 질문은 개인 정보를 뺀 뒤 이곳과 INSIGHTS에 답변으로 소개합니다.</p></div><a href="https://docs.google.com/forms/d/e/1FAIpQLSf8pws-FB7LwfgDY9mtJlSMv27iB7aOA8XbQJEaigZF8QkfPA/viewform" target="_blank" rel="noopener" class="btn solid">익명으로 질문하기</a></div>
+</div></section>
 
 <section id="contact" class="sec soft contact"><div class="wrap">
 <div style="max-width:560px">
