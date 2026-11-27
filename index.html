@@ -75,6 +75,13 @@ a{color:inherit;text-decoration:none}
 .mn-ft{margin-top:auto;padding-top:28px;font-size:13px;line-height:1.8;color:#5A6270}
 /* careers */
 .careers{background:#fff;border-top:1px solid #EFEDE8}
+.crmsg{margin:18px 0 0;font-size:22px;color:#7A6236;letter-spacing:1px}
+.crval{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #122235}
+.crval>div{padding:26px 28px 26px 0;display:flex;flex-direction:column;gap:6px}
+.crval>div+div{padding-left:28px;border-left:1px solid #E6E3DC}
+.crval span{font-size:14px;color:#C7AC78}
+.crval b{font-size:22px;color:#122235;letter-spacing:4px}
+.crval em{font-style:normal;font-size:14px;line-height:1.7;color:#4A5363}
 .crgrid{margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .crcard{border:1px solid #E6E3DC;border-top:2px solid #122235;padding:40px 40px 44px;display:flex;flex-direction:column}
 .crn{font-size:16px;color:#C7AC78}
@@ -245,6 +252,9 @@ section{scroll-margin-top:84px}
  .sec{padding:72px 0}
  .hero{padding:72px 0 80px}
  .crgrid{grid-template-columns:1fr;gap:18px}
+ .crmsg{font-size:18px}
+ .crval{grid-template-columns:1fr}
+ .crval>div,.crval>div+div{padding:18px 0;border-left:0;border-bottom:1px solid #E6E3DC}
  .crcard{padding:30px 24px 32px}
  .crcard .btn{align-self:stretch;text-align:center}
  .crflow{flex-direction:column;align-items:flex-start;gap:16px}
@@ -399,8 +409,14 @@ section{scroll-margin-top:84px}
 
 <section id="careers" class="sec careers"><div class="wrap">
 <div class="eyebrow">CAREERS</div>
-<h2 class="serif">가치를 잇는 사람</h2>
-<p class="lead muted">대표님 곁에서 회사의 중요한 결정을 함께 준비할 인재를 모십니다.<br>정규직과 프리랜서 모두 열려 있고, 지금 당장이 아니더라도 인재풀에 먼저 등록해 두실 수 있습니다.</p>
+<h2 class="serif">인재채용</h2>
+<p class="crmsg serif">기업과 가치를 잇는 일, 이음에서 함께합니다.</p>
+<p class="lead muted">대표님 곁에서 회사의 중요한 결정을 함께 준비할 인재를 모십니다. 정규직과 프리랜서 모두 열려 있고, 지금 당장이 아니더라도 인재풀에 먼저 등록해 두실 수 있습니다.</p>
+<div class="crval">
+<div><span class="latin">01</span><b>경청</b><em>대표님의 이야기를 끝까지 듣고, 핵심을 정리합니다.</em></div>
+<div><span class="latin">02</span><b>책임</b><em>맡은 일은 결과까지 책임지고 끝맺습니다.</em></div>
+<div><span class="latin">03</span><b>실행</b><em>진단에서 멈추지 않고, 실제로 움직이게 만듭니다.</em></div>
+</div>
 <div class="crgrid">
 <div class="crcard"><div class="crn latin">01</div><h3 class="serif">컨설턴트</h3><div class="crtag">정규직 · 프리랜서</div>
 <dl><dt>하는 일</dt><dd>중소·중견기업 대표님과 상담하고, 정책자금 · 법인재무 · 가업승계 · 중대재해 대비 과제를 함께 진단하고 실행합니다.</dd>
