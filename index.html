@@ -181,9 +181,15 @@ section{scroll-margin-top:84px}
 .sr-p{grid-column:3;font-size:14px;color:#4A5363}
 .sr-s{grid-column:3;font-size:12px;color:#5A6270}
 .siren-note{margin:14px 0 0;font-size:12px;color:#5A6270}
+.sr-t-ck{position:absolute;opacity:0;pointer-events:none}
+.sr-more{display:none}
 /* faq */
 .faq{margin-top:56px;max-width:860px;border-top:1px solid #E6E3DC}
-.faq>div{padding:28px 0;border-bottom:1px solid #E6E3DC}
+.faq>details{padding:24px 0;border-bottom:1px solid #E6E3DC}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";font-weight:400;color:#7A6236;font-size:22px;line-height:1}
+.faq details[open] summary:after{content:"−"}
 .faq .q{font-size:18px;font-weight:700}
 .faq p{margin:10px 0 0;font-size:15px;line-height:1.75}
 .anon{margin-top:48px;max-width:860px;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:32px 36px;background:#F5F5F3;border-left:2px solid #C7AC78}
@@ -201,6 +207,31 @@ section{scroll-margin-top:84px}
 .ft .wrap{padding-top:52px;padding-bottom:52px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 .ft .b{display:flex;align-items:center;gap:10px;color:#fff;font-size:15px}
 @media (max-width:900px){
+ .wrap{padding:0 20px}
+ .sec{padding:72px 0}
+ .hero{padding:72px 0 80px}
+ .eyebrow{letter-spacing:3px;font-size:12px}
+ .btns{flex-direction:column;align-items:stretch}
+ .btns .btn{text-align:center}
+ .ngrid{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:84%;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 20px;gap:12px;margin:40px -20px 0;padding:0 20px;scrollbar-width:none}
+ .ngrid::-webkit-scrollbar{display:none}
+ .ncard{scroll-snap-align:start;min-height:300px}
+ .ncard.feat{grid-column:auto}
+ .ins-h:after{content:'← 옆으로 넘겨 보세요 →';display:block;margin-top:14px;font-size:12px;color:#7A6236;letter-spacing:1px}
+ .siren-list .sr:nth-child(n+4){display:none}
+ .sr-t-ck:checked+.siren-list .sr{display:grid}
+ .sr-more{display:block;margin-top:14px;padding:14px;border:1px solid #122235;text-align:center;font-size:14px;cursor:pointer}
+ .sr-more .c{display:none}
+ .sr-t-ck:checked~.sr-more .o{display:none}
+ .sr-t-ck:checked~.sr-more .c{display:inline}
+ .steps{grid-template-columns:1fr;gap:0}
+ .steps li{display:grid;grid-template-columns:44px 1fr;column-gap:8px;padding:18px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.12)}
+ .steps .n{grid-row:span 2;font-size:24px}
+ .steps .t{margin-top:0}
+ .steps .d{margin-top:4px}
+ .portrait{max-width:240px;margin:0 auto}
+ .cinfo .rows{font-size:15px}
+ .h-faq{}
  .wrap{padding:0 22px}
  .mnav-main .en{font-size:32px}
  .mnav{padding-top:96px}
@@ -219,7 +250,6 @@ section{scroll-margin-top:84px}
  .area{flex-direction:column;gap:10px}
  .area .gold-v{display:none}
  .steps{grid-template-columns:1fr;gap:28px}
- .ngrid{grid-template-columns:1fr}
  .sr{grid-template-columns:1fr;gap:4px}
  .sr-p,.sr-s{grid-column:auto}
  .anon{flex-direction:column;align-items:flex-start;padding:26px 22px}
@@ -265,7 +295,8 @@ section{scroll-margin-top:84px}
 <!--NEWS-START--><div class="ngrid"><a class="ncard feat" href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=20147" target="_blank" rel="noopener"><span class="ncat">중대재해</span><span class="nt serif">산재 사망 반복되면 영업이익 5% 과징금, 우리 회사는 괜찮을까</span><span class="nd">개정 산업안전보건법이 2026년 10월 공포됐습니다. 안전·보건조치 위반으로 1년에 3명 이상이 사망하면 영업이익의 5% 범위에서 과징금이 부과되고, 하청 근로자도 원청에 작업중지를 요구할 수 있게 됩니다. 2027년 1월부터 조항별로 단계적으로 시행됩니다.</span><span class="nmeta"><span class="ndt latin">2026.10.27</span><span class="nsrc2">출처 · 고용노동부 보도자료 · 법률신문</span></span></a><a class="ncard" href="https://www.lawtimes.co.kr/news/articleView.html?idxno=226692" target="_blank" rel="noopener"><span class="ncat">가업승계</span><span class="nt serif">가업상속공제가 다시 짜입니다</span><span class="nd">정부가 가업의 정의를 새로 두고, 가업상속공제와 승계 증여특례의 대상·요건·사후관리를 다시 설계하는 세제개편안을 냈습니다. 국회 확정 내용에 따라 승계 계획 점검이 필요합니다.</span><span class="nmeta"><span class="ndt latin">2026.09.21</span><span class="nsrc2">출처 · 법률신문 (법무법인 태평양)</span></span></a><a class="ncard" href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=18908" target="_blank" rel="noopener"><span class="ncat">노동법</span><span class="nt serif">위험성평가, 2027년부터 안 하면 과태료</span><span class="nd">근로자대표 참여 등 새 위험성평가 절차는 이미 시행 중이고, 위반 과태료는 50인 이상 사업장 2027년 1월, 50인 미만은 2028년 1월부터 적용됩니다.</span><span class="nmeta"><span class="ndt latin">2026.01.29</span><span class="nsrc2">출처 · 고용노동부 보도자료 · 법률신문</span></span></a><a class="ncard" href="https://www.lawtimes.co.kr/news/articleView.html?idxno=226934" target="_blank" rel="noopener"><span class="ncat">노동법</span><span class="nt serif">연차 반차 사용·불이익 금지, 취업규칙 손볼 때</span><span class="nd">2027년 6월부터 연차를 반일 단위로 나눠 쓸 근거가 명확해지고, 연차 사용을 이유로 불리하게 대우하면 벌금이 부과됩니다.</span><span class="nmeta"><span class="ndt latin">2026.09.28</span><span class="nsrc2">출처 · 법률신문 (김·장 법률사무소)</span></span></a><a class="ncard" href="https://www.nts.go.kr/seoulnts/na/ntt/selectNttList.do?mi=7945&bbsId=1028" target="_blank" rel="noopener"><span class="ncat">국세청</span><span class="nt serif">고용·투자 늘린 중소기업, 세무조사 부담 던다</span><span class="nd">국세청이 고용과 투자를 늘린 중소기업의 세무조사 부담을 줄이는 방안을 내놨습니다.</span><span class="nmeta"><span class="ndt latin">2026.10.28</span><span class="nsrc2">출처 · 국세청 보도자료</span></span></a><a class="ncard" href="https://www.lawtimes.co.kr/news/articleView.html?idxno=229162" target="_blank" rel="noopener"><span class="ncat">노동법</span><span class="nt serif">하청 노조가 교섭을 요구한다면, 원청도 사용자입니다</span><span class="nd">개정 노동조합법(노란봉투법) 시행 뒤 근로조건을 실질적으로 결정하는 원청은 그 범위에서 교섭 의무를 집니다. 중앙노동위원회의 사용자성 판단에 불복한 기업 소송도 32건(11.2 기준)에 이릅니다.</span><span class="nmeta"><span class="ndt latin">2026.11.11</span><span class="nsrc2">출처 · 법률신문 · 고용노동부 보도자료</span></span></a><a class="ncard" href="https://moel.go.kr/news/enews/report/enewsView.do?news_seq=20188" target="_blank" rel="noopener"><span class="ncat">노동법</span><span class="nt serif">11월 27일부터, 대표·친족의 직장 내 성희롱에 과태료</span><span class="nd">11월 27일부터 법인 대표자와 대표의 친족인 상급자·근로자도 과태료 대상입니다. 대표자 300만 원, 친족 200만 원이며 재발 시 최대 1천만 원까지 부과됩니다.</span><span class="nmeta"><span class="ndt latin">2026.11.03</span><span class="nsrc2">출처 · 고용노동부 보도자료</span></span></a><a class="ncard" href="https://www.lawtimes.co.kr/news/articleView.html?idxno=229266" target="_blank" rel="noopener"><span class="ncat">노동법</span><span class="nt serif">임금체불 처벌, 최대 징역 5년·벌금 5천만 원으로</span><span class="nd">10월 8일부터 임금·퇴직금 등 체불 처벌 상한이 높아졌습니다. 지급기일이 지난 미지급 임금이 있다면 조기 정산을 검토해야 합니다.</span><span class="nmeta"><span class="ndt latin">2026.10.08</span><span class="nsrc2">출처 · 법률신문</span></span></a></div><!--NEWS-END-->
 <div class="siren">
 <div class="siren-h"><span class="siren-tag">SAFETY ALERT</span><span class="serif">최근 1개월 중대재해</span><span class="siren-sub">같은 사고를 막기 위해, 최근 일어난 사망사고와 점검할 점을 정리했습니다.</span></div>
-<div class="siren-list"><a class="sr" href="https://www.moel.go.kr/local/busan/info/policydata/view.do?bbs_seq=20261100041" target="_blank" rel="noopener"><span class="sr-d latin">2026.11.25</span><span class="sr-k">건설업 · 떨어짐</span><span class="sr-t">전남 무안 철도 공사 현장, 구조물 해체를 위해 철골 위를 이동하다 떨어져 사망</span><span class="sr-p">예방: 추락방호망 먼저 설치, 어려우면 안전대 부착설비와 안전고리 체결</span><span class="sr-s">출처 · 고용노동부 중대재해 사이렌</span></a><a class="sr" href="https://www.dailian.co.kr/news/view/1719224" target="_blank" rel="noopener"><span class="sr-d latin">2026.11.24</span><span class="sr-k">건설업 · 떨어짐</span><span class="sr-t">충남 아산 공장 지붕 태양광 설비 설치 중 채광창을 밟고 약 7m 아래로 떨어져 사망 (재하청 소속)</span><span class="sr-p">예방: 채광창에 튼튼한 덮개 설치, 안전대 부착설비와 안전대 착용</span><span class="sr-s">출처 · 고용노동부 중대재해 사이렌 · 데일리안</span></a><a class="sr" href="https://m.news.nate.com/view/20261121n08518" target="_blank" rel="noopener"><span class="sr-d latin">2026.11.21 보도</span><span class="sr-k">기타 · 떨어짐</span><span class="sr-t">경북 경주 아파트에서 천장 조명을 교체하던 노동자가 떨어져 사망, 중대재해처벌법 위반 여부 수사</span><span class="sr-p">점검: 높은 곳 작업 시 안전한 작업발판과 추락 방지 조치</span><span class="sr-s">출처 · 뉴시스</span></a><a class="sr" href="https://news.jkn.co.kr/post/1111088" target="_blank" rel="noopener"><span class="sr-d latin">2026.11.20</span><span class="sr-k">건설업 · 떨어짐</span><span class="sr-t">전북 김제 수목원 조성 공사 현장, 개구부에 걸터앉아 작업하다 약 4.6m 아래로 떨어져 사망 (하청 소속)</span><span class="sr-p">점검: 개구부 덮개·안전난간 설치, 걸터앉는 작업 금지</span><span class="sr-s">출처 · 재경일보</span></a><a class="sr" href="https://biz.heraldcorp.com/article/10941294" target="_blank" rel="noopener"><span class="sr-d latin">2026.11.18</span><span class="sr-k">건설업 · 떨어짐</span><span class="sr-t">서울 마포 아파트 재건축 현장, 13층 외부 시스템비계 해체 중 약 35m 아래로 떨어져 사망 (하청 소속)</span><span class="sr-p">점검: 비계 해체 순서 준수, 안전난간·추락방호망과 안전대 착용</span><span class="sr-s">출처 · 헤럴드경제 (고용노동부 발표 인용)</span></a><a class="sr" href="https://www.segye.com/newsView/20261111512400" target="_blank" rel="noopener"><span class="sr-d latin">2026.11.10</span><span class="sr-k">제조업 · 끼임</span><span class="sr-t">충남 서천 제지공장, 지게차로 운반하던 종이 롤이 이탈하면서 협력사 근로자가 끼여 사망</span><span class="sr-p">점검: 운반 작업 반경 출입 통제, 적재물 고정과 신호수 배치</span><span class="sr-s">출처 · 세계일보</span></a></div>
+<input type="checkbox" id="srall" class="sr-t-ck" aria-hidden="true"><div class="siren-list"><a class="sr" href="https://www.moel.go.kr/local/busan/info/policydata/view.do?bbs_seq=20261100041" target="_blank" rel="noopener"><span class="sr-d latin">2026.11.25</span><span class="sr-k">건설업 · 떨어짐</span><span class="sr-t">전남 무안 철도 공사 현장, 구조물 해체를 위해 철골 위를 이동하다 떨어져 사망</span><span class="sr-p">예방: 추락방호망 먼저 설치, 어려우면 안전대 부착설비와 안전고리 체결</span><span class="sr-s">출처 · 고용노동부 중대재해 사이렌</span></a><a class="sr" href="https://www.dailian.co.kr/news/view/1719224" target="_blank" rel="noopener"><span class="sr-d latin">2026.11.24</span><span class="sr-k">건설업 · 떨어짐</span><span class="sr-t">충남 아산 공장 지붕 태양광 설비 설치 중 채광창을 밟고 약 7m 아래로 떨어져 사망 (재하청 소속)</span><span class="sr-p">예방: 채광창에 튼튼한 덮개 설치, 안전대 부착설비와 안전대 착용</span><span class="sr-s">출처 · 고용노동부 중대재해 사이렌 · 데일리안</span></a><a class="sr" href="https://m.news.nate.com/view/20261121n08518" target="_blank" rel="noopener"><span class="sr-d latin">2026.11.21 보도</span><span class="sr-k">기타 · 떨어짐</span><span class="sr-t">경북 경주 아파트에서 천장 조명을 교체하던 노동자가 떨어져 사망, 중대재해처벌법 위반 여부 수사</span><span class="sr-p">점검: 높은 곳 작업 시 안전한 작업발판과 추락 방지 조치</span><span class="sr-s">출처 · 뉴시스</span></a><a class="sr" href="https://news.jkn.co.kr/post/1111088" target="_blank" rel="noopener"><span class="sr-d latin">2026.11.20</span><span class="sr-k">건설업 · 떨어짐</span><span class="sr-t">전북 김제 수목원 조성 공사 현장, 개구부에 걸터앉아 작업하다 약 4.6m 아래로 떨어져 사망 (하청 소속)</span><span class="sr-p">점검: 개구부 덮개·안전난간 설치, 걸터앉는 작업 금지</span><span class="sr-s">출처 · 재경일보</span></a><a class="sr" href="https://biz.heraldcorp.com/article/10941294" target="_blank" rel="noopener"><span class="sr-d latin">2026.11.18</span><span class="sr-k">건설업 · 떨어짐</span><span class="sr-t">서울 마포 아파트 재건축 현장, 13층 외부 시스템비계 해체 중 약 35m 아래로 떨어져 사망 (하청 소속)</span><span class="sr-p">점검: 비계 해체 순서 준수, 안전난간·추락방호망과 안전대 착용</span><span class="sr-s">출처 · 헤럴드경제 (고용노동부 발표 인용)</span></a><a class="sr" href="https://www.segye.com/newsView/20261111512400" target="_blank" rel="noopener"><span class="sr-d latin">2026.11.10</span><span class="sr-k">제조업 · 끼임</span><span class="sr-t">충남 서천 제지공장, 지게차로 운반하던 종이 롤이 이탈하면서 협력사 근로자가 끼여 사망</span><span class="sr-p">점검: 운반 작업 반경 출입 통제, 적재물 고정과 신호수 배치</span><span class="sr-s">출처 · 세계일보</span></a></div>
+<label for="srall" class="sr-more"><span class="o">전체 보기</span><span class="c">접기</span></label>
 <p class="siren-note">고용노동부 중대재해 사이렌과 언론 보도를 바탕으로 요약했으며, 조사 결과에 따라 사고 내용이 달라질 수 있습니다. '예방'은 고용노동부 안내, '점검'은 이음파트너스가 정리한 기본 안전수칙입니다.</p>
 </div>
 <p class="nsrc">모든 내용은 정부 보도자료와 법령 원문으로 사실을 확인한 뒤 요약했습니다. 각 카드에 출처를 표기했으며, 누르면 원문으로 이동합니다.</p>
@@ -333,15 +364,15 @@ section{scroll-margin-top:84px}
 <div class="eyebrow">FAQ</div>
 <h2 class="serif">자주 묻는 질문</h2>
 <div class="faq">
-<div><div class="q">어떤 자료가 필요한가요?</div><p class="muted">사업자등록증이면 시작할 수 있고, 재무제표와 정관이 있으면 더 정확합니다.</p></div>
-<div><div class="q">세무 신고도 해 주나요?</div><p class="muted">신고와 세무 대리는 협력 세무사가 맡습니다.</p></div>
-<div><div class="q">기존에 거래하는 세무사가 있어도 되나요?</div><p class="muted">네. 기존 세무사와 함께 협업해 진행할 수 있습니다.</p></div>
-<div><div class="q">상담 내용과 자료는 안전한가요?</div><p class="muted">상담에서 받은 자료와 내용은 상담 목적 외에는 쓰지 않습니다.</p></div>
-<div><div class="q">정책자금은 언제 준비하는 게 좋나요?</div><p class="muted">정책자금은 연초에 공고가 나고 예산이 소진되면 마감되는 경우가 많아, 연말부터 미리 준비하는 것이 좋습니다.</p></div>
-<div><div class="q">가지급금은 꼭 정리해야 하나요?</div><p class="muted">가지급금에는 인정이자가 붙고 대표님 소득으로 처리되는 등 세무 문제가 생길 수 있어, 생긴 원인에 맞게 정리하는 것이 좋습니다.</p></div>
-<div><div class="q">가업승계는 언제부터 준비해야 하나요?</div><p class="muted">가업상속공제와 증여특례에는 사전요건과 사후관리 요건이 있어, 승계 시점보다 몇 년 앞서 준비해야 합니다.</p></div>
-<div><div class="q">중대재해처벌법은 우리 회사에도 적용되나요?</div><p class="muted">상시근로자 5인 이상 사업장이라면 적용 대상입니다. 안전보건 관리체계를 갖췄는지 점검이 필요합니다.</p></div>
-<div><div class="q">상담은 어떻게 진행되나요?</div><p class="muted">전화, 이메일, 카카오톡으로 연락 주시면 일정을 잡아 이음파트너스 사무실로 모시거나, 대표님 회사로 직접 찾아뵙습니다.</p></div>
+<details><summary class="q">어떤 자료가 필요한가요?</summary><p class="muted">사업자등록증이면 시작할 수 있고, 재무제표와 정관이 있으면 더 정확합니다.</p></details>
+<details><summary class="q">세무 신고도 해 주나요?</summary><p class="muted">신고와 세무 대리는 협력 세무사가 맡습니다.</p></details>
+<details><summary class="q">기존에 거래하는 세무사가 있어도 되나요?</summary><p class="muted">네. 기존 세무사와 함께 협업해 진행할 수 있습니다.</p></details>
+<details><summary class="q">상담 내용과 자료는 안전한가요?</summary><p class="muted">상담에서 받은 자료와 내용은 상담 목적 외에는 쓰지 않습니다.</p></details>
+<details><summary class="q">정책자금은 언제 준비하는 게 좋나요?</summary><p class="muted">정책자금은 연초에 공고가 나고 예산이 소진되면 마감되는 경우가 많아, 연말부터 미리 준비하는 것이 좋습니다.</p></details>
+<details><summary class="q">가지급금은 꼭 정리해야 하나요?</summary><p class="muted">가지급금에는 인정이자가 붙고 대표님 소득으로 처리되는 등 세무 문제가 생길 수 있어, 생긴 원인에 맞게 정리하는 것이 좋습니다.</p></details>
+<details><summary class="q">가업승계는 언제부터 준비해야 하나요?</summary><p class="muted">가업상속공제와 증여특례에는 사전요건과 사후관리 요건이 있어, 승계 시점보다 몇 년 앞서 준비해야 합니다.</p></details>
+<details><summary class="q">중대재해처벌법은 우리 회사에도 적용되나요?</summary><p class="muted">상시근로자 5인 이상 사업장이라면 적용 대상입니다. 안전보건 관리체계를 갖췄는지 점검이 필요합니다.</p></details>
+<details><summary class="q">상담은 어떻게 진행되나요?</summary><p class="muted">전화, 이메일, 카카오톡으로 연락 주시면 일정을 잡아 이음파트너스 사무실로 모시거나, 대표님 회사로 직접 찾아뵙습니다.</p></details>
 </div>
 <div class="anon"><div><div class="anon-t serif">직접 묻기 어려우신가요?</div><p class="muted">이름 없이 업종과 궁금한 점만 남겨 주세요. 좋은 질문은 개인 정보를 뺀 뒤 이곳과 INSIGHTS에 답변으로 소개합니다.</p></div><a href="https://docs.google.com/forms/d/e/1FAIpQLSf8pws-FB7LwfgDY9mtJlSMv27iB7aOA8XbQJEaigZF8QkfPA/viewform" target="_blank" rel="noopener" class="btn solid">익명으로 질문하기</a></div>
 </div></section>
