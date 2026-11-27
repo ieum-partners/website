@@ -73,6 +73,24 @@ a{color:inherit;text-decoration:none}
 .mn-anon:hover{color:#122235}
 .mn-anon{margin-top:6px;font-size:14px;color:#4A5363;text-decoration:underline;text-underline-offset:4px}
 .mn-ft{margin-top:auto;padding-top:28px;font-size:13px;line-height:1.8;color:#5A6270}
+/* careers */
+.careers{background:#fff;border-top:1px solid #EFEDE8}
+.crgrid{margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.crcard{border:1px solid #E6E3DC;border-top:2px solid #122235;padding:40px 40px 44px;display:flex;flex-direction:column}
+.crn{font-size:16px;color:#C7AC78}
+.crcard h3{margin:10px 0 0;font-size:26px;color:#122235;letter-spacing:2px}
+.crtag{margin-top:8px;font-size:13px;letter-spacing:1px;color:#7A6236}
+.crcard dl{margin:28px 0 32px;flex:1}
+.crcard dt{font-size:14px;font-weight:700;color:#122235;margin-top:18px}
+.crcard dt:first-child{margin-top:0}
+.crcard dd{margin:6px 0 0;font-size:15px;line-height:1.85;color:#4A5363}
+.crcard .btn{align-self:flex-start}
+.crflow{margin-top:48px;display:flex;align-items:center;gap:40px;padding:28px 0;border-top:1px solid #E6E3DC;border-bottom:1px solid #E6E3DC}
+.crflow-t{font-size:14px;font-weight:700;color:#122235;flex-shrink:0}
+.crflow ol{list-style:none;margin:0;padding:0;display:flex;gap:36px;flex-wrap:wrap}
+.crflow li{font-size:15px;color:#4A5363}
+.crflow li span{color:#C7AC78;margin-right:10px;font-size:15px}
+.crnote{margin-top:20px;font-size:13px}
 /* hero */
 .hero{padding:150px 0 160px}
 .hero .wrap{display:flex;align-items:center;justify-content:space-between;gap:48px}
@@ -226,6 +244,11 @@ section{scroll-margin-top:84px}
  .wrap{padding:0 20px}
  .sec{padding:72px 0}
  .hero{padding:72px 0 80px}
+ .crgrid{grid-template-columns:1fr;gap:18px}
+ .crcard{padding:30px 24px 32px}
+ .crcard .btn{align-self:stretch;text-align:center}
+ .crflow{flex-direction:column;align-items:flex-start;gap:16px}
+ .crflow ol{flex-direction:column;gap:10px}
  .eyebrow{letter-spacing:3px;font-size:12px}
  .btns{flex-direction:column;align-items:stretch}
  .btns .btn{text-align:center}
@@ -281,7 +304,7 @@ section{scroll-margin-top:84px}
 <label for="mnav" class="mnav-dim" aria-hidden="true"></label>
 <aside class="mnav" aria-label="전체 메뉴">
 <div class="mn-top"><a href="#top" class="brand" onclick="document.getElementById('mnav').checked=false"><svg role="img" aria-label="이음파트너스 로고" width="30" height="30" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#122235"/><rect x="44" y="44" width="32" height="32" fill="#C7AC78"/></svg><div class="wm"><div class="ko"><span>이</span><span>음</span><span>파</span><span>트</span><span>너</span><span>스</span></div><div class="en"><span>I</span><span>E</span><span>U</span><span>M</span><span style="width:3px"></span><span>P</span><span>A</span><span>R</span><span>T</span><span>N</span><span>E</span><span>R</span><span>S</span></div></div></a><label for="mnav" class="mnav-x" aria-label="메뉴 닫기"><span></span><span></span></label></div>
-<nav class="mnav-main"><a href="#insights" onclick="document.getElementById('mnav').checked=false"><span class="mn-n latin">01</span><span class="mn-k">소식</span><span class="mn-e latin">INSIGHTS</span></a><a href="#funding" onclick="document.getElementById('mnav').checked=false"><span class="mn-n latin">02</span><span class="mn-k">정책자금 신청</span><span class="mn-e latin">FUNDING</span></a><a href="#areas" onclick="document.getElementById('mnav').checked=false"><span class="mn-n latin">03</span><span class="mn-k">업무 영역</span><span class="mn-e latin">PRACTICE</span></a><a href="#process" onclick="document.getElementById('mnav').checked=false"><span class="mn-n latin">04</span><span class="mn-k">일하는 방식</span><span class="mn-e latin">PROCESS</span></a><a href="#about" onclick="document.getElementById('mnav').checked=false"><span class="mn-n latin">05</span><span class="mn-k">대표 소개</span><span class="mn-e latin">PROFILE</span></a><a href="#contact" onclick="document.getElementById('mnav').checked=false"><span class="mn-n latin">06</span><span class="mn-k">상담 신청</span><span class="mn-e latin">CONTACT</span></a></nav>
+<nav class="mnav-main"><a href="#insights" onclick="document.getElementById('mnav').checked=false"><span class="mn-n latin">01</span><span class="mn-k">소식</span><span class="mn-e latin">INSIGHTS</span></a><a href="#funding" onclick="document.getElementById('mnav').checked=false"><span class="mn-n latin">02</span><span class="mn-k">정책자금 신청</span><span class="mn-e latin">FUNDING</span></a><a href="#areas" onclick="document.getElementById('mnav').checked=false"><span class="mn-n latin">03</span><span class="mn-k">업무 영역</span><span class="mn-e latin">PRACTICE</span></a><a href="#process" onclick="document.getElementById('mnav').checked=false"><span class="mn-n latin">04</span><span class="mn-k">일하는 방식</span><span class="mn-e latin">PROCESS</span></a><a href="#about" onclick="document.getElementById('mnav').checked=false"><span class="mn-n latin">05</span><span class="mn-k">대표 소개</span><span class="mn-e latin">PROFILE</span></a><a href="#careers" onclick="document.getElementById('mnav').checked=false"><span class="mn-n latin">06</span><span class="mn-k">인재 채용</span><span class="mn-e latin">CAREERS</span></a><a href="#contact" onclick="document.getElementById('mnav').checked=false"><span class="mn-n latin">07</span><span class="mn-k">상담 신청</span><span class="mn-e latin">CONTACT</span></a></nav>
 <div class="mn-cta">
 <div class="mn-lab">상담 문의</div>
 <a href="https://pf.kakao.com/_UgIeX/chat" target="_blank" rel="noopener" class="btn kakao">카카오톡 상담</a>
@@ -372,6 +395,24 @@ section{scroll-margin-top:84px}
 <div class="h serif"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7A6236" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M4 7h16M4 7l-3 7a3 3 0 0 0 6 0zM20 7l-3 7a3 3 0 0 0 6 0z"/></svg>전문가 협업 네트워크</div>
 <div class="list muted">세무사 · 회계사 · 노무사 · 변호사 · 변리사</div>
 <p class="note">세액 계산과 신고, 등기, 법률 판단은 협력 전문가가 맡습니다.</p>
+</div></section>
+
+<section id="careers" class="sec careers"><div class="wrap">
+<div class="eyebrow">CAREERS</div>
+<h2 class="serif">함께할 사람을 찾습니다</h2>
+<p class="lead muted">대표님 곁에서 회사의 중요한 결정을 함께 준비할 분을 기다립니다.<br>정규직과 프리랜서 모두 열려 있고, 지금 당장이 아니더라도 인재풀에 먼저 등록해 두실 수 있습니다.</p>
+<div class="crgrid">
+<div class="crcard"><div class="crn latin">01</div><h3 class="serif">컨설턴트</h3><div class="crtag">정규직 · 프리랜서</div>
+<dl><dt>하는 일</dt><dd>중소·중견기업 대표님과 상담하고, 정책자금 · 법인재무 · 가업승계 · 중대재해 대비 과제를 함께 진단하고 실행합니다.</dd>
+<dt>이런 분을 환영합니다</dt><dd>기업 재무·세무·노무·보험 분야 경험이 있는 분<br>대표님의 이야기를 끝까지 듣고 정리할 수 있는 분<br>근무 방식은 상황에 맞춰 협의합니다</dd></dl>
+<a href="mailto:kms@ieum-partners.co.kr?subject=%5B%EC%BB%A8%EC%84%A4%ED%84%B4%ED%8A%B8%20%EC%A7%80%EC%9B%90%5D%20" class="btn solid">컨설턴트 지원하기</a></div>
+<div class="crcard"><div class="crn latin">02</div><h3 class="serif">상시 인재풀 등록</h3><div class="crtag">수시 · 상시</div>
+<dl><dt>이렇게 운영합니다</dt><dd>지금 열린 자리가 없어도 이력서와 관심 분야를 남겨 주시면, 맞는 프로젝트나 자리가 생길 때 먼저 연락드립니다.</dd>
+<dt>보내 주실 것</dt><dd>이력서(자유 양식)<br>관심 분야와 희망 근무 형태<br>연락 가능한 연락처</dd></dl>
+<a href="mailto:kms@ieum-partners.co.kr?subject=%5B%EC%9D%B8%EC%9E%AC%ED%92%80%20%EB%93%B1%EB%A1%9D%5D%20" class="btn line">인재풀 등록하기</a></div>
+</div>
+<div class="crflow"><div class="crflow-t">지원 절차</div><ol><li><span class="latin">01</span>이메일 지원</li><li><span class="latin">02</span>서류 검토</li><li><span class="latin">03</span>대표 인터뷰</li><li><span class="latin">04</span>근무 형태 협의</li></ol></div>
+<p class="crnote muted">지원서와 개인정보는 채용 검토 목적으로만 사용합니다. 문의 · 지원: kms@ieum-partners.co.kr</p>
 </div></section>
 
 <section class="sec"><div class="wrap">
