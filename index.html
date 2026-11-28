@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ko">
 <head>
+<script id="top-on-reload">/* 11/28 '홈페이지 열면 다섯 가지가 먼저 나와': 새로 고침하면 늘 맨 위부터(칸 순서를 바꿔도 옛 위치로 가지 않게). 뒤로 가기는 그대로 */(function(){try{var n=performance.getEntriesByType('navigation')[0];if(!n||n.type!=='reload'||location.hash)return;if('scrollRestoration' in history)history.scrollRestoration='manual';var t=function(){window.scrollTo(0,0)};t();addEventListener('DOMContentLoaded',t);addEventListener('load',function(){t();setTimeout(t,0)});addEventListener('pagehide',function(){history.scrollRestoration='auto'})}catch(e){}})();</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>이음파트너스 | 기업경영컨설팅</title>
