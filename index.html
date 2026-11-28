@@ -574,13 +574,13 @@ section{scroll-margin-top:112px}
 </div>
 <script>(function(){var h=document.querySelector(".hd");if(!h)return;var on=false;function f(){var v=window.scrollY>60;if(v!==on){on=v;h.classList.toggle("small",v)}}window.addEventListener("scroll",f,{passive:true});f()})();</script>
 <script>(function(){var sec=document.getElementById('cardnews');if(!sec)return;
-var items=[].slice.call(sec.querySelectorAll('.cn')),more=sec.querySelector('.cn-more'),f='all',shown=12;
+var items=[].slice.call(sec.querySelectorAll('.cn')),more=sec.querySelector('.cn-more'),f='all',shown=6;
 var pop=document.getElementById('cnPop'),tr=pop.querySelector('.cn-track'),pt=pop.querySelector('.cn-pt'),ln=pop.querySelector('.cn-link');
 function draw(){var k=0;items.forEach(function(it){var ok=f==='all'||it.dataset.g===f;if(ok){k++;it.style.display=k<=shown?'':'none'}else{it.style.display='none'}});
 more.parentNode.style.display=k>shown?'':'none';if(k>shown)more.querySelector('span').textContent='+'+(k-shown)}
-sec.querySelectorAll('.cnf button').forEach(function(b){b.addEventListener('click',function(){f=b.dataset.f;shown=12;
+sec.querySelectorAll('.cnf button').forEach(function(b){b.addEventListener('click',function(){f=b.dataset.f;shown=6;
 sec.querySelectorAll('.cnf button').forEach(function(x){x.classList.toggle('on',x===b)});draw()})});
-more.addEventListener('click',function(){shown+=12;draw()});
+more.addEventListener('click',function(){shown+=6;draw()});
 function close(){pop.classList.remove('on');tr.innerHTML='';document.body.style.overflow=''}
 items.forEach(function(it){var b=it.querySelector('.cn-open');b.addEventListener('click',function(){var d=b.dataset,src=[];
 if(d.imgs){src=d.imgs.split(',')}else{for(var i=1;i<=+d.n;i++){src.push('cardnews/'+d.s+'/'+d.s+'-'+(i<10?'0':'')+i+'.webp')}}
