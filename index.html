@@ -267,11 +267,22 @@ section{scroll-margin-top:112px}
 .cinfo .rows{display:flex;flex-direction:column;gap:12px;font-size:16px}
 .cinfo .rows div{display:flex;gap:18px}
 .cinfo .rows span:first-child{width:18px;font-weight:700}
+/* contact 어둡게 (11/28 사용자 "하단 컬러가 어두운게 나은거 같다") */
+.contact.dk{background:#122235;color:#fff}
+.contact.dk .eyebrow{color:#C7AC78}
+.contact.dk h2{color:#fff}
+.contact.dk .muted,.contact.dk .lead{color:#C9CDD4}
+.contact.dk .rows span.lb{color:#C7AC78}
+.contact.dk .ceasy a{color:#fff}
+.contact.dk .btn.solid{background:#C7AC78;border-color:#C7AC78;color:#122235}
+.contact.dk .btn.solid:hover{background:#D6BE8E;border-color:#D6BE8E}
+.contact.dk .btn.line{border-color:#C7AC78;color:#fff}
+.contact.dk .btn.line:hover{background:#C7AC78;color:#122235}
 /* footer */
-.ft{background:#F5F5F3;color:#4A5363;font-size:13px;border-top:2px solid #C7AC78}
+.ft{background:#0B1522;color:#8E97A6;font-size:13px;border-top:1px solid #22324A}
 .ft .wrap{padding-top:52px;padding-bottom:52px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.ft .b{display:flex;align-items:center;gap:12px;color:#122235;font-size:15px}
-.ft .b .ko{font-weight:700;font-size:18px;letter-spacing:5px}.ft .b .en{font-size:11px;letter-spacing:4px;color:#7A6236;margin-top:4px}
+.ft .b{display:flex;align-items:center;gap:12px;color:#fff;font-size:15px}
+.ft .b .ko{font-weight:700;font-size:18px;letter-spacing:5px}.ft .b .en{font-size:11px;letter-spacing:4px;color:#C7AC78;margin-top:4px}
 @media (max-width:900px){
  .wrap{padding:0 20px}
  .sec{padding:72px 0}
@@ -498,7 +509,7 @@ section{scroll-margin-top:112px}
 </div>
 </div></section>
 
-<section id="contact" class="sec soft contact"><div class="wrap">
+<section id="contact" class="sec contact dk"><div class="wrap">
 <div style="max-width:560px">
 <div class="eyebrow">CONTACT</div>
 <h2 class="serif">상담 신청</h2>
@@ -507,15 +518,15 @@ section{scroll-margin-top:112px}
 <p class="ceasy muted">직접 묻기 어려우시면, 연락처만 남기는 <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8pws-FB7LwfgDY9mtJlSMv27iB7aOA8XbQJEaigZF8QkfPA/viewform" target="_blank" rel="noopener">간편 문의 →</a></p>
 </div>
 <div class="cinfo"><div class="gold-v"></div><div class="rows muted">
-<div><span style="color:#122235">M.</span><span>010-9983-0153</span></div>
-<div><span style="color:#122235">E.</span><span>kms@ieum-partners.co.kr</span></div>
-<div><span style="color:#122235">K.</span><span>카카오톡 채널 '이음파트너스'</span></div>
-<div><span style="color:#122235">A.</span><span>서울특별시 송파구 송파대로 567</span></div>
+<div><span class="lb">M.</span><span>010-9983-0153</span></div>
+<div><span class="lb">E.</span><span>kms@ieum-partners.co.kr</span></div>
+<div><span class="lb">K.</span><span>카카오톡 채널 '이음파트너스'</span></div>
+<div><span class="lb">A.</span><span>서울특별시 송파구 송파대로 567</span></div>
 </div></div>
 </div></section>
 
 <footer class="ft"><div class="wrap">
-<div class="b"><svg role="img" aria-label="이음파트너스 로고" width="34" height="34" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#122235"/><rect x="44" y="44" width="32" height="32" fill="#C7AC78"/></svg><div><div class="ko serif">이음파트너스</div><div class="en latin">IEUM PARTNERS</div></div></div>
+<div class="b"><svg role="img" aria-label="이음파트너스 로고" width="34" height="34" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#F5F5F3"/><rect x="44" y="44" width="32" height="32" fill="#C7AC78"/></svg><div><div class="ko serif">이음파트너스</div><div class="en latin">IEUM PARTNERS</div></div></div>
 <div>대표 강민성 · 서울특별시 송파구 송파대로 567 · kms@ieum-partners.co.kr</div>
 <div>© 2026 IEUM PARTNERS</div>
 </div></footer>
