@@ -611,14 +611,16 @@ section{scroll-margin-top:112px}
 </div></footer>
 </div>
 <script>(function(){var h=document.querySelector(".hd");if(!h)return;var on=false;function f(){var v=window.scrollY>60;if(v!==on){on=v;h.classList.toggle("small",v)}}window.addEventListener("scroll",f,{passive:true});f()})();</script>
+<script id="ins-js">(function(){var g=document.querySelector('#insights .ngrid');if(!g)return;function go(d){g.style.scrollSnapType='none';var x=Math.max(0,Math.min(g.scrollWidth-g.clientWidth,g.scrollLeft+d*g.clientWidth));g.scrollTo({left:x,behavior:'smooth'});clearTimeout(g._t);g._t=setTimeout(function(){g.style.scrollSnapType=''},800)}document.querySelector('.ins-pv').addEventListener('click',function(){go(-1)});document.querySelector('.ins-nx').addEventListener('click',function(){go(1)});})();</script>
 <script>(function(){var sec=document.getElementById('cardnews');if(!sec)return;
 var items=[].slice.call(sec.querySelectorAll('.cn')),grid=sec.querySelector('.cn-grid'),f='all';
 var pop=document.getElementById('cnPop'),tr=pop.querySelector('.cn-track'),pt=pop.querySelector('.cn-pt'),ln=pop.querySelector('.cn-link');
 function draw(){items.forEach(function(it){it.style.display=(f==='all'||it.dataset.g===f)?'':'none'});grid.scrollLeft=0}
 sec.querySelectorAll('.cnf button').forEach(function(b){b.addEventListener('click',function(){f=b.dataset.f;
 sec.querySelectorAll('.cnf button').forEach(function(x){x.classList.toggle('on',x===b)});draw()})});
-sec.querySelector('.cn-pv').addEventListener('click',function(){grid.scrollBy({left:-grid.clientWidth,behavior:'smooth'})});
-sec.querySelector('.cn-nx').addEventListener('click',function(){grid.scrollBy({left:grid.clientWidth,behavior:'smooth'})});
+function go(d){grid.style.scrollSnapType='none';var x=Math.max(0,Math.min(grid.scrollWidth-grid.clientWidth,grid.scrollLeft+d*grid.clientWidth));grid.scrollTo({left:x,behavior:'smooth'});clearTimeout(grid._t);grid._t=setTimeout(function(){grid.style.scrollSnapType=''},800)}
+sec.querySelector('.cn-pv').addEventListener('click',function(){go(-1)});
+sec.querySelector('.cn-nx').addEventListener('click',function(){go(1)});
 function close(){pop.classList.remove('on');tr.innerHTML='';document.body.style.overflow=''}
 items.forEach(function(it){var b=it.querySelector('.cn-open');b.addEventListener('click',function(){var d=b.dataset,src=[];
 if(d.imgs){src=d.imgs.split(',')}else{for(var i=1;i<=+d.n;i++){src.push('cardnews/'+d.s+'/'+d.s+'-'+(i<10?'0':'')+i+'.webp')}}
