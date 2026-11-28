@@ -500,6 +500,35 @@ section{scroll-margin-top:112px}
 .hero4 .h4-p{margin-top:30px;font-size:15.5px;line-height:1.9}
 }
 </style>
+<style id="srch-css">
+.hd-l{display:flex;align-items:center;gap:18px}
+.srch-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;padding:0;border:0;background:none;color:#122235;cursor:pointer}
+.srch-btn svg{width:22px;height:22px}
+.srch-btn:hover{color:#7A6236}
+.srch{position:fixed;inset:0;z-index:100;display:none;overflow-y:auto;background:#FBFAF7}
+.srch.on{display:block}
+.sr-in{max-width:760px;margin:0 auto;padding:44px 24px 80px}
+.sr-bar{display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:2px solid #122235}
+.sr-bar svg{width:24px;height:24px;flex:0 0 24px;color:#7A6236}
+.sr-bar input{flex:1;min-width:0;padding:8px 0;border:0;background:transparent;font:inherit;font-size:22px;color:#122235;outline:none;-webkit-appearance:none}
+.sr-bar input::-webkit-search-cancel-button{display:none}
+.sr-x{border:0;background:none;font:inherit;font-size:15px;color:#56606E;cursor:pointer;white-space:nowrap}
+.sr-k{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.sr-k span{margin-right:6px;font-size:13px;color:#8A93A0}
+.sr-k button{padding:7px 14px;border:1px solid #E6E1D6;background:#fff;font:inherit;font-size:14px;color:#122235;cursor:pointer}
+.sr-k button:hover{border-color:#C7AC78}
+.srch.has .sr-k{display:none}
+.sr-info{margin:22px 0 4px;font-size:14px;color:#7A6236}
+.sr-it{display:block;margin-top:10px;padding:18px 18px 18px 20px;background:#fff;border-left:3px solid var(--c);border-bottom:1px solid #ECEAE4;text-decoration:none}
+.sr-it:hover{box-shadow:0 8px 20px rgba(18,34,53,.08)}
+.sr-c{display:block;font-size:12.5px;font-weight:700;color:var(--c)}
+.sr-t{display:block;margin-top:6px;font-family:'Nanum Myeongjo',serif;font-weight:800;font-size:18px;line-height:1.45;color:#122235;word-break:keep-all}
+.sr-s{display:block;margin-top:8px;font-size:14px;line-height:1.7;color:#56606E;word-break:keep-all}
+.sr-d{display:block;margin-top:8px;font-size:12px;color:#8A93A0}
+.sr-it mark{padding:0 1px;background:rgba(199,172,120,.38);color:inherit}
+@media (max-width:640px){.hd-l{gap:12px}.srch-btn{width:32px;height:32px}.srch-btn svg{width:20px;height:20px}
+.sr-in{padding:20px 16px 60px}.sr-bar input{font-size:17px}.sr-t{font-size:16.5px}.sr-s{font-size:13.5px}}
+</style>
 </head>
 <body>
 <div class="page">
@@ -517,7 +546,7 @@ section{scroll-margin-top:112px}
 <div class="mn-ft">M. 010-9983-0153<br>E. kms@ieum-partners.co.kr</div>
 </aside>
 <header class="hd"><div class="wrap">
-<label for="mnav" class="burger" aria-label="메뉴 열기"><span></span><span></span><span></span></label>
+<div class="hd-l"><label for="mnav" class="burger" aria-label="메뉴 열기"><span></span><span></span><span></span></label><button type="button" class="srch-btn" aria-label="글 검색"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg></button></div>
 <a href="#top" class="brand"><svg role="img" aria-label="이음파트너스 로고" width="64" height="64" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="#122235"/><rect x="44" y="44" width="32" height="32" fill="#C7AC78"/></svg><div class="wm"><div class="ko"><span>이</span><span>음</span><span>파</span><span>트</span><span>너</span><span>스</span></div><div class="en"><span>I</span><span>E</span><span>U</span><span>M</span><span style="width:3px"></span><span>P</span><span>A</span><span>R</span><span>T</span><span>N</span><span>E</span><span>R</span><span>S</span></div></div></a>
 <nav class="nav" aria-label="주요 메뉴"><a href="#contact" class="cta">상담 신청</a></nav>
 </div></header>
@@ -655,5 +684,33 @@ pop.querySelector('.cn-next').addEventListener('click',function(){tr.scrollBy({l
 document.addEventListener('keydown',function(e){if(!pop.classList.contains('on'))return;if(e.key==='Escape')close();
 if(e.key==='ArrowRight')tr.scrollBy({left:tr.clientWidth,behavior:'smooth'});if(e.key==='ArrowLeft')tr.scrollBy({left:-tr.clientWidth,behavior:'smooth'})});
 draw()})();</script>
+<div id="srch" class="srch" role="dialog" aria-modal="true" aria-label="글 검색"><div class="sr-in"><form class="sr-bar" role="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><input type="search" enterkeyhint="search" placeholder="키워드로 글 찾기 (예: 퇴직금, 가지급금)" aria-label="검색어" autocomplete="off"><button type="button" class="sr-x" aria-label="검색 닫기">닫기 ✕</button></form><div class="sr-k"><span>자주 찾는 낱말</span><button type="button">퇴직금</button><button type="button">가지급금</button><button type="button">중대재해</button><button type="button">가업승계</button><button type="button">세무조사</button><button type="button">정책자금</button><button type="button">근로계약서</button><button type="button">상속세</button></div><p class="sr-info" aria-live="polite"></p><div class="sr-list"></div></div></div>
+<script id="srch-js">(function(){
+var btn=document.querySelector('.srch-btn'),ov=document.getElementById('srch');if(!btn||!ov)return;
+var inp=ov.querySelector('input'),list=ov.querySelector('.sr-list'),info=ov.querySelector('.sr-info'),data=null,tm;
+var C={safety:'#9A3B32',labor:'#2E6B66',grant:'#5E7A8A',nts:'#5B6E3A',inherit:'#6B4A8A',fund:'#9A5B2C',navy:'#122235'};
+function load(){if(data)return Promise.resolve(data);return fetch('/search.json').then(function(r){return r.json()}).then(function(j){data=j.map(function(o){o.L=(o.t+' '+o.d+' '+o.c+' '+o.x).toLowerCase();return o});return data})}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function hi(s,ws){s=esc(s);ws.forEach(function(w){var e=esc(w).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');if(e)s=s.replace(new RegExp(e,'gi'),function(m){return'<mark>'+m+'</mark>'})});return s}
+function snip(o,ws){var src=o.d+' '+o.x,L=src.toLowerCase(),i=-1;for(var k=0;k<ws.length&&i<0;k++)i=L.indexOf(ws[k]);if(i<0)return o.d;var a=Math.max(0,i-34),b=Math.min(src.length,i+72);return(a>0?'… ':'')+src.slice(a,b)+(b<src.length?' …':'')}
+function cnt(h,w){return h.split(w).length-1}
+function run(){if(!data)return;var ws=inp.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+if(!ws.length){list.innerHTML='';info.textContent='';ov.classList.remove('has');return}
+ov.classList.add('has');var r=[];
+data.forEach(function(o){if(!ws.every(function(w){return o.L.indexOf(w)>=0}))return;var sc=0;
+ws.forEach(function(w){if(o.t.toLowerCase().indexOf(w)>=0)sc+=10;if(o.d.toLowerCase().indexOf(w)>=0)sc+=4;if(o.c.toLowerCase().indexOf(w)>=0)sc+=3;sc+=Math.min(5,cnt(o.x.toLowerCase(),w))});r.push([sc,o])});
+r.sort(function(a,b){return b[0]-a[0]||(a[1].dt<b[1].dt?1:-1)});
+info.textContent=r.length?('검색 결과 '+r.length+'건'):'찾는 글이 없습니다. 다른 낱말로 찾아보세요.';
+list.innerHTML=r.slice(0,40).map(function(x){var o=x[1];return'<a class="sr-it" href="'+o.u+'" style="--c:'+(C[o.g]||C.navy)+'"><span class="sr-c">'+esc(o.c)+'</span><span class="sr-t">'+hi(o.t,ws)+'</span><span class="sr-s">'+hi(snip(o,ws),ws)+'</span><span class="sr-d">'+o.dt+'</span></a>'}).join('')}
+function open(q){ov.classList.add('on');document.body.style.overflow='hidden';if(q!=null)inp.value=q;setTimeout(function(){inp.focus()},60);load().then(run)}
+function close(){ov.classList.remove('on');document.body.style.overflow=''}
+inp.addEventListener('input',function(){clearTimeout(tm);tm=setTimeout(run,120)});
+btn.addEventListener('click',function(){open()});
+ov.querySelector('.sr-x').addEventListener('click',close);
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&ov.classList.contains('on'))close()});
+ov.querySelectorAll('.sr-k button').forEach(function(b){b.addEventListener('click',function(){inp.value=b.textContent;run();inp.blur()})});
+ov.querySelector('form').addEventListener('submit',function(e){e.preventDefault();inp.blur()});
+var m=location.search.match(/[?&]q=([^&]*)/);if(m)open(decodeURIComponent(m[1].replace(/\+/g,' ')));
+})();</script>
 </body>
 </html>
